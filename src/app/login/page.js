@@ -1,21 +1,25 @@
 export default function login() {
   return (
     <>
-      <div className="flex flex-row items-center justify-center mt-10">
+      <div className="flex flex-row items-center justify-center mt-8">
+
         <div>
-          <div className="absolute inset-0 bg-black/45 z-10 w-115 h-128.5 rounded-l-3xl">
-            <div className="absolute inset-0 z-20 flex flex-row justify-center items-center mt-40">
+          <div className="absolute bg-black/45 z-10 w-150 h-167.5 rounded-l-3xl">
+            <div className="absolute z-20 flex flex-row justify-center items-center">
+              <div className="flex item-centers justify-center w-40">
                 <img
                 src="Logo.png"
                 className=""
                 />
+              </div>
             </div>
           </div>
           <img
             src="image 2 (1).png"
-            className="object-cover rounded-l-3xl z-0 w-115"
+            className="object-cover rounded-l-3xl z-0 w-150"
           />
         </div>
+
         <div>
           <div className="absolute w-115 h-128.5 rounded-r-3xl bg-white/20 backdrop-blur-md border border-white/30 shadow-lg">
           <div className="p-12 mt-12 space-y-2">
@@ -43,7 +47,7 @@ export default function login() {
           </div>
           <img
             src="image 2 (1).png"
-            className="object-cover rounded-r-3xl z-0 w-115"
+            className="object-cover rounded-r-3xl z-0 w-150"
           />
         </div>
       </div>
