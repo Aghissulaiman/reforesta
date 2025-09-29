@@ -6,11 +6,34 @@ export default function login() {
         <div>
           <div className="absolute bg-black/45 z-10 w-115 h-128.5 rounded-l-3xl">
             <div className="absolute z-20 flex flex-row justify-center items-center">
-              <div className="flex item-centers justify-center w-40">
+              <div>
+              <div className="flex flex-col item-centers justify-center w-25 ml-42 mt-25">
                 <img
                 src="Logo.png"
                 className=""
                 />
+              </div>
+                <div className="text-center ml-10">
+                <div className="text-white text-xl whitespace-nowrap font-bold">
+                <p>    Selamat datang kembali, Penjaga Bumi</p>
+                </div>
+                <div className="text-white text-lg whitespace-nowrap">
+                <p>    Kita butuh kamu lagi. Bumi gak bisa nunggu</p>
+                <div>
+                <div className="text-white text-lg whitespace-nowrap mt-10">
+                  <p>Belum Punya akun ?</p>
+                </div>
+                <div>
+                  <button className="bg-white text-[#4CAF50] w-40 h-8 rounded-4xl mt-4 hover:bg-[#4CAF50] hover:text-white transition ease-in-out duration-300
+">
+                    Daftar
+                  </button>
+                </div>
+                </div>
+                </div>
+                </div>
+              </div>
+              <div>
               </div>
             </div>
           </div>
