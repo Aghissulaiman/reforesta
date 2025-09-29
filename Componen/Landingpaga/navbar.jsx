@@ -44,7 +44,7 @@ export default function Navbar() {
         {/* Tombol */}
         <div className="flex gap-3">
           <Link
-            href="#"
+            href={"/login"}
             className="px-4 py-1 rounded-full bg-[#4CAF50] text-white font-medium hover:bg-green-600"
           >
             Masuk
