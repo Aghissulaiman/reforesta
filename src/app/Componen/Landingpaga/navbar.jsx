@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header className="w-full bg-white shadow-sm">
+    <header className="w-full bg-white shadow-sm rounded-b-3xl">
       <nav className="max-w-7xl mx-auto flex items-center justify-between py-3 px-4">
         {/* Logo + Nama */}
         <Link href="/" className="flex items-center gap-2">
@@ -44,7 +44,7 @@ export default function Navbar() {
         {/* Tombol */}
         <div className="flex gap-3">
           <Link
-            href={"/login"}
+            href="/login"
             className="px-4 py-1 rounded-full bg-[#4CAF50] text-white font-medium hover:bg-green-600"
           >
             Masuk
