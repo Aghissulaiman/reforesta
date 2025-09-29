@@ -50,7 +50,7 @@ export default function Navbar() {
             Masuk
           </Link>
           <Link
-            href="#"
+            href="/register"
             className="px-4 py-1 rounded-full border border-[#4CAF50] text-black font-medium hover:bg-green-50"
           >
             Daftar
