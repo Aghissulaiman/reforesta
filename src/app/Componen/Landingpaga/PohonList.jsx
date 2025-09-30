@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 
 export default function PohonList() {
-  // Variasi animasi tiap kartu
   const cardVariant = {
     hidden: { opacity: 0, scale: 0.9, y: 40 },
     visible: (i) => ({
@@ -14,11 +13,12 @@ export default function PohonList() {
     }),
   };
 
+  // Tambahkan label untuk semua gambar
   const images = [
-    { src: "/pohon1.png", alt: "Pohon Sengon", label: "Pohon Sengon", overlay: true },
-    { src: "/pohon2.png", alt: "Bibit Pohon 2" },
-    { src: "/pohon3.png", alt: "Bibit Pohon 3" },
-    { src: "/pohon4.png", alt: "Bibit Pohon 4" },
+    { src: "/pohon1.png", alt: "Pohon Sengon", label: "Pohon Sengon" },
+    { src: "/pohon2.png", alt: "Bibit Pohon 2", label: "Bibit Pohon 2" },
+    { src: "/pohon3.png", alt: "Bibit Pohon 3", label: "Bibit Pohon 3" },
+    { src: "/pohon4.png", alt: "Bibit Pohon 4", label: "Bibit Pohon 4" },
   ];
 
   return (
@@ -36,24 +36,31 @@ export default function PohonList() {
               variants={cardVariant}
               initial="hidden"
               whileInView="visible"
-              // === Perubahan penting di bawah ===
-              viewport={{ once: false, amount: 0.3 }} // animasi bisa berulang
+              viewport={{ once: false, amount: 0.3 }}
               custom={i}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
             >
+              {/* Gambar */}
               <img
                 src={img.src}
                 alt={img.alt}
                 className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              {img.overlay && (
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                  <span className="text-white font-semibold text-lg">
-                    {img.label}
-                  </span>
-                </div>
-              )}
+
+              {/* Overlay yang muncul saat hover */}
+              <div className="
+                absolute inset-0 flex items-center justify-center 
+                bg-black/0 group-hover:bg-black/40 
+                transition-colors duration-300
+              ">
+                <span className="
+                  text-white text-lg font-semibold opacity-0 
+                  group-hover:opacity-100 transition-opacity duration-300
+                ">
+                  {img.label}
+                </span>
+              </div>
             </motion.div>
           ))}
         </div>
