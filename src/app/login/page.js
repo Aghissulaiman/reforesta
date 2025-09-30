@@ -1,4 +1,32 @@
+import { supabase } from "@/lib/supabaseClient";
+import { useState } from "react";
 export default function login() {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState("");
+
+  const handleLogin = async (e) => {
+    e.prevenDefault();
+    setError("");
+    setLoading(true);
+
+    const {data, error} = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    if (error) {
+      setError(error.message);
+    }
+    else {
+      console.log("sukses")
+      window.location.href = "/dashboard"
+    }
+  }
+
+
   return (
     <>
       <div className="flex flex-row items-center justify-center p-25">
